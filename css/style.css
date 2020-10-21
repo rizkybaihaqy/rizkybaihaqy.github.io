@@ -4,7 +4,7 @@ body{
 }
 
 #aboutPage{
-    background: url(imgs/bg3.jpg) bottom center;
+    background: url(../imgs/bg3.jpg) bottom center;
     background-size: 1500px;
 }
 
@@ -22,14 +22,14 @@ body{
 }
 
 .header .jumbotron{
-    background: url(imgs/bg.jpg) no-repeat center center;
+    background: url(../imgs/bg.jpg) no-repeat center center;
     background-size: cover;
     color: #fff;
     min-height: 600px;
 }
 
 .header .jumbotron-smol{
-    background: url(imgs/bg2.jpg) no-repeat center center;
+    background: url(../imgs/bg2.jpg) no-repeat center center;
     background-size: cover;
     color: #fff;
     min-height: 10px;
