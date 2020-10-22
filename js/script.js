@@ -30,6 +30,12 @@ function validateForm(){
     message();
 }
 
+$(document).ready(function(){
+    $(".navbar-toggler").click(function(){
+      $("#navbarMain").toggleClass("bg-black");
+    });
+});
+
 $(function () {
     $(document).scroll(function() {
         var $nav = $("#navbarMain");
