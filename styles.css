@@ -61,6 +61,7 @@ p > a:visited {
 
 /* Monitor */
 main {
+  position: relative;
   margin: 0 auto;
   background-color: var(--teal);
   border: var(--gray) solid 10px;
