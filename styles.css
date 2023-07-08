@@ -48,6 +48,11 @@ h6 {
   margin: 0;
 }
 
+/* Globals */
+a:focus {
+  outline: dashed 1px black;
+}
+
 /* Monitor */
 main {
   margin: 0 auto;
