@@ -53,6 +53,12 @@ a:focus {
   outline: dashed 1px black;
 }
 
+p > a,
+p > a:visited {
+  color: blue;
+  text-decoration: underline;
+}
+
 /* Monitor */
 main {
   margin: 0 auto;
@@ -98,12 +104,6 @@ footer {
   padding: 0 10px 10px 10px;
   background-color: var(--gray);
   color: #000;
-}
-
-footer > a,
-footer > a:visited {
-  color: blue;
-  text-decoration: underline;
 }
 
 footer > a {
