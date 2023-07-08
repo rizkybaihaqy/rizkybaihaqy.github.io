@@ -39,6 +39,15 @@ a:visited {
   text-decoration: none;
 }
 
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+}
+
 /* Monitor */
 main {
   margin: 0 auto;
@@ -52,12 +61,12 @@ nav {
   width: min-content;
 }
 
-nav > ul {
+ul {
   padding: 0;
   margin: 0;
 }
 
-nav > ul > li {
+ul > li {
   position: relative;
   list-style-type: none;
   margin-bottom: 2rem;
@@ -67,7 +76,7 @@ nav > ul > li {
   text-align: center;
 }
 
-nav > ul > li > a::before {
+ul > li > a::before {
   content: "";
   position: absolute;
   top: 0px;
@@ -84,6 +93,12 @@ footer {
   padding: 0 10px 10px 10px;
   background-color: var(--gray);
   color: #000;
+}
+
+footer > a,
+footer > a:visited {
+  color: blue;
+  text-decoration: underline;
 }
 
 footer > a {
@@ -124,9 +139,8 @@ section {
 
 section > article {
   max-width: 500px;
-  padding: 1rem;
-  box-shadow: inset 0px 23px 1px black,
-    inset .5px 0px 1px black,
+  padding: calc(30px + 1rem) 1rem 1rem 1rem;
+  box-shadow: inset 0px 23px 1px black, inset 0.5px 0px 1px black,
     inset 0px -2px 1px rgba(255, 255, 255, 0.3),
     inset -2px 0px 1px rgba(255, 255, 255, 0.3);
 }
@@ -152,10 +166,10 @@ section > h2 {
   padding: 4px;
 }
 
-section > article a,
-section > article a:visited {
-  color: blue;
-  text-decoration: underline;
+section > article > ul {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
 }
 
 /* Interactivity */
