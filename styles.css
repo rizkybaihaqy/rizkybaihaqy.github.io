@@ -1,5 +1,6 @@
 /* Variables */
 :root {
+  --light-gray: #e3e3e3;
   --gray: #c0c0c0;
   --dark-gray: #808080;
   --teal: #006666;
@@ -31,6 +32,12 @@
   font-size: 12px;
 }
 
+/* Reset */
+a, a:visited {
+  color: inherit;
+  text-decoration: none;
+}
+
 /* Monitor */
 main {
   margin: 0 auto;
@@ -44,21 +51,19 @@ nav {
   width: min-content;
 }
 
+nav > ul {
+  padding: 0;
+  margin: 0;
+}
+
 nav > ul > li {
   position: relative;
   list-style-type: none;
   margin-bottom: 2rem;
-}
-
-nav > ul > li > a {
-  color: white;
-  display: block;
-  text-decoration: none;
-}
-
-nav > ul > li > a:visited {
-  color: inherit;
-  text-decoration: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
 }
 
 nav > ul > li > a::before {
@@ -75,25 +80,23 @@ footer {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0 1rem 1rem 1rem;
+  padding: 0 10px 10px 10px;
   background-color: var(--gray);
   color: #000;
 }
 
-footer > button {
+footer > a {
   background-color: var(--gray);
   cursor: pointer;
   font-family: inherit;
   border: none;
-  padding: 0.5rem 1.5rem;
+  padding: .2rem 1rem;
   box-shadow: 0px 2px 1px rgba(0, 0, 0, 0.3), 2px 0px 1px rgba(0, 0, 0, 0.3),
     0px -2px 1px rgba(255, 255, 255, 0.3), -2px 0px 1px rgba(255, 255, 255, 0.3);
 }
 
-footer > button:hover {
-  background-color: #e3e3e3;
-  border: none;
-  padding: 0.5rem 1.5rem;
+footer > a:hover {
+  background-color: var(--light-gray);
   box-shadow: 0px 1px 1px rgba(255, 255, 255, 0.3),
     1px 0px 1px rgba(255, 255, 255, 0.3), 0px -1px 1px rgba(0, 0, 0, 0.3),
     -1px 0px 1px rgba(0, 0, 0, 0.3);
@@ -101,7 +104,7 @@ footer > button:hover {
 
 footer > time {
   background-color: var(--gray);
-  padding: 0.5rem 1.5rem;
+  padding: .2rem 1rem;
   box-shadow: inset 0px 1px 1px rgba(0, 0, 0, 0.3),
     inset 1px 0px 1px rgba(0, 0, 0, 0.3),
     inset 0px -1px 1px rgba(255, 255, 255, 0.3),
