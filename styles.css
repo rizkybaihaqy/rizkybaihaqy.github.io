@@ -124,7 +124,10 @@ footer > a:hover {
     -1px 0px 1px rgba(0, 0, 0, 0.3);
 }
 
-footer > div > time {
+footer > div {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
   background-color: var(--gray);
   padding: 0.2rem 1rem;
   box-shadow: inset 0px 1px 1px rgba(0, 0, 0, 0.3),
