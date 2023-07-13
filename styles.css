@@ -9,6 +9,14 @@
   --size-sm: 0.25rem;
   --size-md: 1rem;
   --size-lg: 1.75rem;
+
+  --shadow-1: 1px 1px 0px 0.2px rgba(0, 0, 0),
+    inset 1px 1px 0px 1px rgba(255, 255, 255, 0.3),
+    inset -1px -1px 0px 1px rgba(0, 0, 0, 0.3);
+  --shadow-2: inset 0px 1px 1px rgba(0, 0, 0, 0.3),
+    inset 1px 0px 1px rgba(0, 0, 0, 0.3),
+    inset 0px -1px 1px rgba(255, 255, 255, 0.3),
+    inset -1px 0px 1px rgba(255, 255, 255, 0.3);
 }
 
 /* Font */
@@ -130,15 +138,12 @@ footer {
 footer > a {
   background-color: var(--gray);
   padding: var(--size-sm) var(--size-md);
-  box-shadow: 0px 2px 1px rgba(0, 0, 0, 0.3), 2px 0px 1px rgba(0, 0, 0, 0.3),
-    0px -2px 1px rgba(255, 255, 255, 0.3), -2px 0px 1px rgba(255, 255, 255, 0.3);
+  box-shadow: var(--shadow-1);
 }
 
 footer > a:hover {
   background-color: var(--light-gray);
-  box-shadow: 0px 1px 1px rgba(255, 255, 255, 0.3),
-    1px 0px 1px rgba(255, 255, 255, 0.3), 0px -1px 1px rgba(0, 0, 0, 0.3),
-    -1px 0px 1px rgba(0, 0, 0, 0.3);
+  box-shadow: var(--shadow-2);
 }
 
 footer > div {
@@ -147,10 +152,7 @@ footer > div {
   align-items: center;
   background-color: var(--gray);
   padding: var(--size-sm) var(--size-md);
-  box-shadow: inset 0px 1px 1px rgba(0, 0, 0, 0.3),
-    inset 1px 0px 1px rgba(0, 0, 0, 0.3),
-    inset 0px -1px 1px rgba(255, 255, 255, 0.3),
-    inset -1px 0px 1px rgba(255, 255, 255, 0.3);
+  box-shadow: var(--shadow-2);
 }
 
 /* Window */
@@ -165,11 +167,10 @@ section {
 
 section > article {
   max-width: 500px;
-  padding: calc(20px + var(--size-md)) var(--size-md) var(--size-md) var(--size-md);
+  padding: calc(20px + var(--size-md)) var(--size-md) var(--size-md)
+    var(--size-md);
   position: relative;
-  box-shadow: inset 0px 20px 1px black, inset 0.5px 0px 1px black,
-    inset 0px -2px 1px rgba(255, 255, 255, 0.3),
-    inset -2px 0px 1px rgba(255, 255, 255, 0.3);
+  box-shadow: var(--shadow-2);
 }
 
 section > article::after {
