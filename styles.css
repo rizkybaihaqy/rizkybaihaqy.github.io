@@ -22,6 +22,11 @@
 
 * {
   margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
 }
 
 body {
@@ -38,13 +43,6 @@ svg {
   max-width: 100%;
 }
 
-input,
-button,
-textarea,
-select {
-  font: inherit;
-}
-
 p,
 h1,
 h2,
@@ -53,6 +51,11 @@ h4,
 h5,
 h6 {
   overflow-wrap: break-word;
+}
+
+ol,
+ul {
+  list-style: none;
 }
 
 a,
@@ -82,7 +85,6 @@ p > a:visited {
 /* Desktop */
 main {
   position: relative;
-  margin: 0 auto;
   background-color: var(--teal);
   border: var(--gray) solid 10px;
   padding: 20px;
@@ -91,11 +93,6 @@ main {
 /* Icon */
 nav {
   width: min-content;
-}
-
-ul {
-  padding: 0;
-  margin: 0;
 }
 
 ul > li {
@@ -117,21 +114,18 @@ ul > li > a::before {
   left: 0px;
 }
 
-/* Start Menu */
+/* Taskbar */
 footer {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 0 10px 10px 10px;
   background-color: var(--gray);
-  color: #000;
+  color: black;
 }
 
 footer > a {
   background-color: var(--gray);
-  cursor: pointer;
-  font-family: inherit;
-  border: none;
   padding: 0.2rem 1rem;
   box-shadow: 0px 2px 1px rgba(0, 0, 0, 0.3), 2px 0px 1px rgba(0, 0, 0, 0.3),
     0px -2px 1px rgba(255, 255, 255, 0.3), -2px 0px 1px rgba(255, 255, 255, 0.3);
@@ -168,8 +162,9 @@ section {
 
 section > article {
   max-width: 500px;
-  padding: calc(30px + 1rem) 1rem 1rem 1rem;
-  box-shadow: inset 0px 23px 1px black, inset 0.5px 0px 1px black,
+  padding: calc(20px + 1rem) 1rem 1rem 1rem;
+  position: relative;
+  box-shadow: inset 0px 20px 1px black, inset 0.5px 0px 1px black,
     inset 0px -2px 1px rgba(255, 255, 255, 0.3),
     inset -2px 0px 1px rgba(255, 255, 255, 0.3);
 }
@@ -177,8 +172,8 @@ section > article {
 section > article::after {
   content: "File Edit View Help";
   position: absolute;
-  top: 30px;
-  left: 0px;
+  top: 0;
+  left: 0;
   background-color: var(--gray);
   width: 100%;
   font-size: 0.8rem;
@@ -186,11 +181,9 @@ section > article::after {
 }
 
 section > h2 {
-  margin: 0;
   font-size: 1rem;
   font-weight: normal;
   color: white;
-
   background-color: var(--blue);
   padding: 4px;
 }
