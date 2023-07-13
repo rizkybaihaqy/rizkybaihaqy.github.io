@@ -185,8 +185,6 @@ section > article::after {
 }
 
 section > h2 {
-  font-size: var(--size-md);
-  font-weight: normal;
   color: white;
   background-color: var(--blue);
   padding: var(--size-sm);
