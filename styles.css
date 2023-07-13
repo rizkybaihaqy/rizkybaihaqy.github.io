@@ -59,7 +59,7 @@ p > a:visited {
   text-decoration: underline;
 }
 
-/* Monitor */
+/* Desktop */
 main {
   position: relative;
   margin: 0 auto;
@@ -175,7 +175,7 @@ section > h2 {
   padding: 4px;
 }
 
-section > article > ul {
+section > article ul {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 1rem;
