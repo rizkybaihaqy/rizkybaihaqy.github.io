@@ -166,8 +166,8 @@ section {
 }
 
 section > article {
-  max-width: 500px;
-  padding: calc(20px + var(--size-md)) var(--size-md) var(--size-md)
+  max-width: 60ch;
+  padding: calc(var(--size-lg) + var(--size-md)) var(--size-md) var(--size-md)
     var(--size-md);
   position: relative;
   box-shadow: var(--shadow-2);
@@ -180,7 +180,8 @@ section > article::after {
   left: 0;
   background-color: var(--gray);
   width: 100%;
-  font-size: 0.8rem;
+  height: var(--size-lg);
+  font-size: 1vw;
   padding: var(--size-sm) var(--size-sm);
 }
 
