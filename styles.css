@@ -181,7 +181,7 @@ section > article::after {
   background-color: var(--gray);
   width: 100%;
   height: var(--size-lg);
-  font-size: 1vw;
+  font-size: 0.8rem;
   padding: var(--size-sm) var(--size-sm);
 }
 
