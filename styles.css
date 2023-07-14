@@ -165,15 +165,23 @@ section {
   color: black;
 }
 
-section > article {
+section > header {
+  color: white;
+  background-color: var(--blue);
+  padding: var(--size-sm);
+}
+
+section > main {
   max-width: 60ch;
+  position: relative;
   padding: calc(var(--size-lg) + var(--size-md)) var(--size-md) var(--size-md)
     var(--size-md);
-  position: relative;
+  background-color: var(--gray);
+  border: none;
   box-shadow: var(--shadow-2);
 }
 
-section > article::after {
+section > main::after {
   content: "File Edit View Help";
   position: absolute;
   top: 0;
@@ -185,13 +193,7 @@ section > article::after {
   padding: var(--size-sm) var(--size-sm);
 }
 
-section > h2 {
-  color: white;
-  background-color: var(--blue);
-  padding: var(--size-sm);
-}
-
-section > article ul {
+section > main ul {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: var(--size-md);
