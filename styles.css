@@ -165,7 +165,7 @@ section {
   color: black;
 }
 
-section > article {
+section > :nth-child(2) {
   max-width: 60ch;
   padding: calc(var(--size-lg) + var(--size-md)) var(--size-md) var(--size-md)
     var(--size-md);
@@ -173,7 +173,7 @@ section > article {
   box-shadow: var(--shadow-2);
 }
 
-section > article::after {
+section > :nth-child(2)::after {
   content: "File Edit View Help";
   position: absolute;
   top: 0;
@@ -191,7 +191,7 @@ section > h2 {
   padding: var(--size-sm);
 }
 
-section > article ul {
+section > ul {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: var(--size-md);
