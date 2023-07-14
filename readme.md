@@ -1,17 +1,18 @@
 # My Computer
 
-This page is Created with `HTML`, `CSS`, and a little bit of vanilla javascript for fetching data. Inspired by [Old Linkin Park Website](https://web.archive.org/web/20200808165448/https://www.linkinpark.com/) and of course Windows 95~98. The routing is inspired by [cardars/john-doe](https://github.com/cadars/john-doe) to uses the `#anchor` suffix and the `:target` CSS selector to show and hide pages/content.
+The page is created using HTML, CSS, and a touch of vanilla JavaScript for data fetching. It draws inspiration from the design of the [Old Linkin Park Website](https://web.archive.org/web/20200808165448/https://www.linkinpark.com/) and the nostalgic feel of Windows 95-98. The routing mechanism is influenced by [cardars/john-doe](https://github.com/cadars/john-doe) utilizing the #anchor suffix and the :target CSS selector to display and hide content.
 
 ## Components
 
-Because this page it built mainly with `HTML` and `CSS`, the components created is tightly coupled with the page itself.
+To keep the code concise, this page makes use of various HTML tags instead of relying heavily on `classes` for styling. Below is a list of the components used in the page:
 
 ### Desktop
 
-Everything that would show on the desktop is placed as the child of `main` tag.
+The elements visible on the desktop are nested within the `main` tag.
 
 ```html
 <main>
+  <nav>...</nav>
   <section>...</section>
   <section style="display: none;"></section>
 </main>
@@ -19,12 +20,12 @@ Everything that would show on the desktop is placed as the child of `main` tag.
 
 ### Icons
 
-Icons is just a unordered list of `li` tag with an `img` tag. There are some styling to the `a::after` pseudo element to make the image clickable.
+The icons are represented as an unordered list (`ul`) of list items (`li`), each containing an image (`img`) and a clickable link (`a`). Additional styling is applied to the a::after pseudo-element to enhance the clickability of the image.
 
 ```html
 <ul>
   <li>
-    <img width="32px" src="assets/recycle-bin.png" alt="recycle bin icon" />
+    <img width="32" src="assets/recycle-bin.png" alt="recycle bin icon" />
     <a href="#recycle-bin">Recycle Bin</a>
   </li>
   ...
@@ -33,7 +34,7 @@ Icons is just a unordered list of `li` tag with an `img` tag. There are some sty
 
 #### Desktop Icons
 
-Use `nav` tag for better semantic if the icons is used for navigating window and not a content itself.
+If the icons are used for navigation rather than as content, it is recommended to wrap them in a `nav` tag for better semantic structure.
 
 ```html
 <nav>...</nav>
@@ -41,20 +42,18 @@ Use `nav` tag for better semantic if the icons is used for navigating window and
 
 ### Window
 
-The window is wrapped inside a `section` tag. The `section` tag is hidden by default, and only shown when the `:target` selector is active. The child of the `section` tag must be an `h2` tag as the title of the window, and an `article` tag as the container of the content. There are some cosmetic style applied to the `article::after` pseudo element to make the window looks like a real window.
+Each window is encapsulated within a `section` tag. By default, the `section` tag is hidden, and it becomes visible only when the corresponding `:target` selector is active. Each `section` tag should have two child elements: an `h2` tag for the window title and another tag (e.g., `article`, `ul`, `div`) for the window content.
 
 ```html
 <section id="profil">
   <h2>Recycle Bin</h2>
-  <article>...</article>
+  ...
 </section>
 ```
 
-### Window Content
+#### Window Content
 
-#### Text as Content
-
-Any html tag can be placed here for the content.
+The content within a window should be enclosed within a single container tag.
 
 ```html
 <article>
@@ -63,25 +62,29 @@ Any html tag can be placed here for the content.
 </article>
 ```
 
+```html
+<div>
+  <p>...</p>
+</div>
+```
+
 #### Icons as Content
 
-The icons wrapped inside an `article` tag would be rendered as a grid of icons.
+When icons are placed inside a `section` tag, they will be rendered as a grid of icons.
 
 ```html
-<article>
-  <ul>
-    <li>
-      <img width="32px" src="" alt="24" />
-      <a href="https://rizkybaihaqy.github.io/24/">24 Game</a>
-    </li>
-    ...
-  </ul>
-</article>
+<ul>
+  <li>
+    <img width="32px" src="" alt="24" />
+    <a href="https://rizkybaihaqy.github.io/24/">24 Game</a>
+  </li>
+  ...
+</ul>
 ```
 
 ### Taskbar
 
-Taskbar is not part of the window so it should be placed outside of `main` tag. The taskbar child is spaced-between so it would be aligned to the left and right side of the taskbar. Use the `div` tag to add more than one item on each side of the taskbar.
+The taskbar is positioned outside the `main` tag as it is not part of the desktop content. The taskbar's child elements are `spaced-evenly`, aligning them to the left and right sides of the taskbar. To add multiple items on each side, use a `div` tag.
 
 ```html
 <main>...</main>
@@ -89,9 +92,13 @@ Taskbar is not part of the window so it should be placed outside of `main` tag. 
   <a role="button" href="#">Start</a>
   <div>
     <a href="#help">
-      <img width="16px" src="assets/help.png" alt="help" />
+      <img width="16" src="assets/help.png" alt="help" />
     </a>
     <time datetime="2023-07-08T16:00:46Z">16:00</time>
   </div>
 </footer>
 ```
+
+## Known Bug
+
+Currently, an additional `section` tag needs to be included in the markup, even though it is hidden using the `display: none;` property. This is required for the routing mechanism to function correctly.
