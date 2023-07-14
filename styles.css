@@ -94,8 +94,15 @@ p > a:visited {
   font-size: 12px;
 }
 
+/* Canvas */
+body {
+  width: min(100%, 800px);
+  margin-inline: auto;
+}
+
 /* Desktop */
 main {
+  aspect-ratio: 4 / 3;
   position: relative;
   background-color: var(--teal);
   border: var(--gray) solid var(--size-md);
