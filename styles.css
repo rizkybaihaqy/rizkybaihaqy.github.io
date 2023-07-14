@@ -80,12 +80,6 @@ a:focus {
   outline: dashed 1px black;
 }
 
-p > a,
-p > a:visited {
-  color: blue;
-  text-decoration: underline;
-}
-
 /* Root */
 :where(:root) {
   background-color: black;
@@ -202,6 +196,12 @@ section > ul {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: var(--size-md);
+}
+
+section p > a,
+section p > a:visited {
+  color: blue;
+  text-decoration: underline;
 }
 
 /* Interactivity */
