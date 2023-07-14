@@ -166,6 +166,21 @@ section {
   color: black;
 }
 
+@media (min-width: 800px) {
+  section::after {
+    content: attr(id);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 200px;
+    text-transform: capitalize;
+    transform: translateY(2200%);
+    background-color: var(--gray);
+    padding: var(--size-sm) var(--size-md);
+    box-shadow: var(--shadow-1);
+  }
+}
+
 section > :nth-child(2) {
   max-width: 60ch;
   padding: calc(var(--size-lg) + var(--size-md)) var(--size-md) var(--size-md)
