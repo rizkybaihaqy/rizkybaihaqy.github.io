@@ -207,6 +207,10 @@ section > h2 {
   padding: var(--size-sm);
 }
 
+section > article {
+  background-color: white;
+}
+
 section > ul {
   display: grid;
   grid-template-columns: 1fr 1fr;
